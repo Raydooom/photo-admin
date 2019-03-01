@@ -2,7 +2,7 @@
   <section class="main">
     <div class="menu">
       <div class="logo">
-        我想学摄影
+        <!-- 我想学摄影 -->
       </div>
       <el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" router>
         <el-menu-item index="/dashBoard">
@@ -67,10 +67,10 @@ export default {
   },
   methods: {
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
     }
   }
 };

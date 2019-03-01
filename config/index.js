@@ -22,7 +22,7 @@ module.exports = {
     proxyTable: {
       '/admin': {
         // target: 'http://localhost:8360', //设置你调用的接口域名和端口号 别忘了加http
-        target: 'http://admin.raydom.wang', //设置你调用的接口域名和端口号 别忘了加http
+        target: 'http://127.0.0.1:8360', //设置你调用的接口域名和端口号 别忘了加http
         secure: true,  // https接口需要配置
         changeOrigin: true,  // 跨域配置
         pathRewrite: {

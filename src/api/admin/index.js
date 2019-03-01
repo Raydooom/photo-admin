@@ -1,6 +1,20 @@
 import http from "../http";
 import { Message } from "element-ui";
 
+export const isLogin = params => {
+  let config = {
+    url: "/admin/login/isLogin",
+    method: "POST",
+    data: params
+  };
+  return http(config)
+    .then(res => {
+      return res.data;
+    })
+    .catch(err => {
+      return err;
+    });
+};
 // 获取加密key
 export const getKey = params => {
   let config = {
@@ -246,6 +260,38 @@ export const getDaily = params => {
 export const updateDaily = params => {
   let config = {
     url: "/admin/index/updateDaily",
+    method: "POST",
+    data: params
+  };
+  return http(config)
+    .then(res => {
+      return res.data;
+    })
+    .catch(err => {
+      return err;
+    });
+};
+
+// 数据统计页面
+export const getDashBoardData = params => {
+  let config = {
+    url: "/admin/dashBoard/getDashBoard",
+    method: "POST",
+    data: params
+  };
+  return http(config)
+    .then(res => {
+      return res.data;
+    })
+    .catch(err => {
+      return err;
+    });
+};
+
+// 每日访客
+export const getDailyVisitor = params => {
+  let config = {
+    url: "/admin/dashBoard/getDailyVisitor",
     method: "POST",
     data: params
   };

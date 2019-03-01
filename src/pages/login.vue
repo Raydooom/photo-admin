@@ -48,7 +48,8 @@ export default {
         if (res.errno == 0) {
           this.aesKey = res.data;
         } else {
-          console.log("获取加密key失败!");
+          this.$message("服务器连接失败！")
+          // console.log("获取加密key失败!");
         }
       });
     },
@@ -68,8 +69,7 @@ export default {
       login(params).then(res => {
         if (res.errno == "0") {
           this.$message.success(res.errmsg);
-          // setTimeout(() => this.$router.go(-1), 500);
-          setTimeout(() => this.$router.go("/project"), 500);
+          this.$router.push("/");
         } else {
           this.$message.error(res.errmsg);
         }

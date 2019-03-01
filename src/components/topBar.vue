@@ -27,6 +27,7 @@ export default {
   methods: {
     logout() {
       logout().then(res => {
+        sessionStorage.removeItem("isLogin");
         this.$router.push("/login");
       });
     }
